@@ -10,5 +10,10 @@ angular.module('starter')
     templateUrl: 'templates/corrida.html',
     controller: 'CorridaController'
   })
+  .state('abrirCorrida',{
+    url: '/abrirCorrida',
+    templateUrl: 'modal/modalTemplate/abreCorrida.html',
+    controller: 'AbreCorridaController'
+  })
 
 });
