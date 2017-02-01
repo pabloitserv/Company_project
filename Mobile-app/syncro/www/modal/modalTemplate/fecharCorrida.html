@@ -6,10 +6,14 @@
   <ion-content ng-controller="FecharCorridaController">
     <form>
 
-      <div class="item">
-        <img src="img/ionic.png" width="50" height="50">
-        <button type="button" class="button button-block button-positive">Tirar Foto</button>
+      <div class="card">
+        <div class="item item-image">
+          <img ng-src="{{srcImage}}" id="srcImage"/><br/>
+          <button type="button" class="button button-block button-positive" ng-click="takeEndPhoto()">Tirar Foto</button>
+        </div>
       </div>
+
+        </div>
 
       <div class="list">
         <label class="item-input item-floating-label">
@@ -22,7 +26,7 @@
           </div>
         </label>
         <div class="item">
-          <button type="button" class="button button-block button-assertive" ng-click="popup()">Finalizar Corrida</button>
+          <button type="button" class="button button-block button-assertive" ng-click="enviarDadosFecharCorrida()">Finalizar Corrida</button>
         </div>
       </div>
     </form>

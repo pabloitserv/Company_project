@@ -29,11 +29,15 @@ angular.module('starter')
   }
 
 
-
+  $scope.close = true;
   $scope.abrirCorrida = function(){
     $scope.openRunModal();
+    $scope.close = false;
+    $scope.open = true;
   }
   $scope.fecharCorrida = function(){
     $scope.closeRunModal();
+    $scope.close = true;
+    $scope.open = false;
   }
 });

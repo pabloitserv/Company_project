@@ -6,9 +6,11 @@
   <ion-content ng-controller="AbreCorridaController">
     <form>
 
-      <div class="item">
-        <img src="img/ionic.png" width="50" height="50">
-        <button type="button" class="button button-block button-positive">Tirar Foto</button>
+      <div class="card">
+        <div class="item item-image">
+          <img ng-src="{{srcImage}}" id="srcImage"/><br/>
+          <button type="button" class="button button-block button-positive" ng-click="takeStartPhoto()">Tirar Foto</button>
+        </div>
       </div>
 
       <div class="list">
@@ -61,7 +63,7 @@
           </select>
         </label>
         <div class="item">
-          <button type="button" class="button button-block button-balanced" ng-click="enviarDados()">Iniciar Corrida</button>
+          <button type="button" class="button button-block button-balanced" ng-click="enviarDadosAbrirCorrida()">Iniciar Corrida</button>
         </div>
       </div>
     </form>
