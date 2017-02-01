@@ -1,8 +1,72 @@
 <ion-modal-view>
   <ion-header-bar class="bar-positive">
     <h1 class="title">Nova Corrida</h1>
+    <button type="button" class="button button-clear button-icon ion-close" ng-click="closeOpenRunModal()"></button>
   </ion-header-bar>
-  <ion-content>
-    olá
+  <ion-content ng-controller="AbreCorridaController">
+    <form>
+
+      <div class="item">
+        <img src="img/ionic.png" width="50" height="50">
+        <button type="button" class="button button-block button-positive">Tirar Foto</button>
+      </div>
+
+      <div class="list">
+        <label class="item-input item-floating-label">
+          <span class="input-label">KM</span>
+          <input type="text" placeholder="Digite o valor do odometro">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Lightsaber
+          </div>
+          <select>
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+            <option>Red</option>
+          </select>
+        </label>
+        <div class="item">
+          <button type="button" class="button button-block button-balanced" ng-click="enviarDados()">Iniciar Corrida</button>
+        </div>
+      </div>
+    </form>
   </ion-content>
+  <ion-footer-bar class="bar-positive">
+    <h1 class="title"> - ITServ - </h1>
+  </ion-footer-bar>
 </ion-modal-view>

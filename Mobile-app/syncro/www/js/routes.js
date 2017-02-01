@@ -12,8 +12,11 @@ angular.module('starter')
   })
   .state('abrirCorrida',{
     url: '/abrirCorrida',
-    templateUrl: 'modal/modalTemplate/abreCorrida.html',
-    controller: 'AbreCorridaController'
+    templateUrl: 'modal/modalTemplate/abreCorrida.html'
+  })
+  .state('fecharCorrida', {
+    url: '/fecharCorrida',
+    templateUrl: 'modal/modalTemplate/fecharCorrida.html'
   })
 
 });

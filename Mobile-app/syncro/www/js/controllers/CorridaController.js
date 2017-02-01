@@ -5,15 +5,35 @@ angular.module('starter')
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
-    $scope.modal = modal;
+    $scope.openModal = modal;
   });
-  $scope.openModal = function() {
-    $scope.modal.show();
+  $scope.openRunModal = function() {
+    $scope.openModal.show();
   };
+  $scope.closeOpenRunModal = function() {
+    $scope.openModal.hide();
+  };
+
+
+  $ionicModal.fromTemplateUrl('modal/modalTemplate/fecharCorrida.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal){
+    $scope.closeModal = modal;
+  });
+  $scope.closeRunModal = function(){
+    $scope.closeModal.show();
+  }
+  $scope.closeCloseRunModal = function(){
+    $scope.closeModal.hide();
+  }
+
+
+
   $scope.abrirCorrida = function(){
-    $scope.openModal();
+    $scope.openRunModal();
   }
   $scope.fecharCorrida = function(){
-    alert("Fechar")
+    $scope.closeRunModal();
   }
 });
