@@ -1,0 +1,37 @@
+<ion-view title="ROTAS" id="page1">
+  <ion-content padding="true" class="has-header">
+    <div class="row text-center">
+      <div class="col">Baixar</div>
+      <div class="col">Enviar</div>
+      <div class="col">Estoque</div>
+      <div class="col">Contratos</div>
+    </div>
+    <div class="button-bar">
+      <a class="button button-positive icon ion-android-download "></a>
+      <a class="button button-calm icon ion-android-upload"></a>
+      <a class="button button-dark icon ion-ios-grid-view" ui-sref="menu.estoque"></a>
+      <a class="button button-stable icon ion-clipboard" ui-sref="menu.contratos"></a>
+    </div>
+    <hr>
+
+    <div class="card">
+      <p class="text-center"><strong>Resumo</strong></p>
+      <div>
+        <h4 class="text-center item-divider"><strong>Estoque de Terminais</strong></h4>
+        <ul class="text-left" style="margin-left:20px;">
+          <li>Quantidade: 08</li>
+        </ul>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <h4 class="text-center item-divider"><strong>Contratos</strong></h4>
+        <ul class="text-left" style="margin-left:20px;">
+          <li>Total de Contratos: <span class="positive"><strong>05</strong></span></li>
+          <li>Contratos Baixados: <span class="balanced">02/<strong>05</strong></span></li>
+          <li>Contratos Restantes: <span class="positive">03/<strong>05</strong></span></li>
+          <li>Contratos não sincronizados: <span class="assertive"><strong>01</strong></span></li>
+        </ul>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
