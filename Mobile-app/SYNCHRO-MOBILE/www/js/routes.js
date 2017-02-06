@@ -2,12 +2,12 @@ angular.module('starter')
 .config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider
-  
-  .state('menu.tabs', {
+
+  .state('menu.baixa', {
     url: '/page6',
     views:{
       'menuContent':{
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'templates/baixa.html'
       }
     }
   })
