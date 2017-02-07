@@ -1,0 +1,26 @@
+{
+  "name": "SYNCHRO-SITE",
+  "homepage": "https://github.com/pabloitserv/Company_project",
+  "authors": [
+    "Pablo <pablo.garcia@itserv.com.br>"
+  ],
+  "description": "Sistema de consulta do app Synchro",
+  "main": "index.js",
+  "keywords": [
+    "Angular",
+    "BootStrap",
+    "Site",
+    "Web",
+    "Consulta",
+    "Relatório"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
