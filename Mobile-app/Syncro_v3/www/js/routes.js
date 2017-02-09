@@ -9,6 +9,10 @@ angular.module('starter')
     templateUrl: 'templates/login.html',
     controller:   'LoginController'
   })
+  .state('dash', {
+    url: '/dash',
+    templateUrl: 'templates/dashboard.html'
+  })
 
 
 });

@@ -1,22 +1,24 @@
-<ion-view title="SYNCHRO - LOGIN" id="login">
+<ion-view id="login" class="fundo">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">SYNCHRO - LOGIN</h1>
+  </ion-header-bar>
   <ion-content padding="true" class="has-header">
 
     <ion-list class="list card">
-      <ion-item class="item item-body">
-        <img src="img/logo.png" alt="Logo empresa" class="full-image"/>
+      <ion-item class="item item-body fundo">
+        <img src="img/logo.png" alt="Logo empresa" class="logo"/>
       </ion-item>
-      <ion-item class="item item-body">
+      <ion-item class="item item-body fundo">
         <label class="item item-input item-floating-label">
-          <span class="input-label">CPF:</span>
-          <input type="number" placeholder="Digite o CPF" style="font-size: 1.5em;">
+          <span class="input-label">CPF:</span>{{params.cpf}}
+          <input type="number" placeholder="Digite o CPF" class="placeholder-login" style="font-size: 1.5em;" ng-model="params.cpf">
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Senha:</span>
-          <input type="number" placeholder="Digite a senha" style="font-size: 1.5em;">
+          <input type="password" placeholder="Digite a senha" class="placeholder-login" style="font-size: 1.5em;" ng-model="params.senha">
         </label>
       </ion-item>
-      <ion-item><button class="button button-block button-calm">Entrar</button></ion-item>
+      <ion-item class="fundo"><button class="button button-block button-calm" style="font-size: 1.2em;" ng-click="validarLogin(params)"><strong>ENTRAR</strong></button></ion-item>
     </ion-list>
-
   </ion-content>
 </ion-view>
