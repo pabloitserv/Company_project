@@ -23,8 +23,9 @@ angular.module('starter', ['ionic'])
     if(window.Connection){
       if(navigator.connection.type == Connection.NONE){
         var popup = $ionicPopup.show({
-          title: 'Mensagem',
-          template: '<p class="text-center assertive" style="font-size: 1.2em;"><strong>Sem internet<br/>O aplicativo vai fechar em 5s</strong></p>',
+          title: '<p class="text-center"><strong>Aviso <i class="icon ion-alert-circled assertive"></i></strong></p>',
+          template: '<p class="text-center"><strong>Sem conexão com a internet <i class="icon ion-social-rss-outline assertive"></i></strong></p><br />'+
+                    '<p class="text-center">Encerrando o sistema</p>'
         });
         $timeout(function(){
           ionic.Platform.exitApp();

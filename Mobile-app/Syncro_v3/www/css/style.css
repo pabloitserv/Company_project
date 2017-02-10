@@ -16,6 +16,7 @@
 }
 .input-label{
     color: #fff;
+    font-weight: bold;
 }
 .placeholder-login::-webkit-input-placeholder {
   color: #fff;
@@ -31,7 +32,7 @@
 }
 input[placeholder] {
   color: #000;
-  border-bottom: 4px outset #999;
+  font-size: 1.4em;
 }
 .field-login {
   color: #fff;

@@ -2,8 +2,8 @@ angular.module('starter')
 
 .factory('userServiceToken', function($http) {
 
-  var _postToken = function(parametros){
-      return $http.post(SERVICE_URL+"/session",parametros);
+  var _postToken = function(params){
+      return $http.post(SERVICE_URL+"/session",params);
   };
 
   return{
@@ -25,12 +25,12 @@ angular.module('starter')
  return {
     putPassword: function(_id,_password){
 
-      var parametros = {
+      var params = {
         id:_id,
         password:_password
       };
       var _url=  SERVICE_URL+"/user";
-      return $http.put(_url,parametros).then(function(response){
+      return $http.put(_url,params).then(function(response){
               console.log("executou");
             return response;
             }, function(error){
