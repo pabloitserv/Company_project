@@ -3,38 +3,37 @@ angular.module('starter')
 .controller('LoginController', function($scope, $ionicPopup, $window, $state, $timeout, Scopes, userServiceToken, userServiceLogin){
 
   $scope.validarLogin = function(){
+    alert("click")
      var parametros = {
-          cpf: $scope.cpf,
-          password: $scope.password
+          cpf: $scope.usuario,
+          password: $scope.senha
         };
 
-
-
-          Scopes.store('loginCtrl',$scope);
+          Scopes.store('LoginController',$scope);
 
           userServiceToken.postToken(parametros).success(function(chave){
             var token = chave.token;
               userServiceLogin.getLogin(token).success(function(user){
-                  console.log(parametros);
+
                 $scope.user = user.value;
                 $scope.nome = user.value.name;
                 $scope.token = token;
                 $scope.usuario = user.value.usuario;
+                console.log($scope.user);
 
                     if (parametros.cpf == user.value.cpf && parametros.password == null) {
                           if (user.value.password == null) {
                             alert("MSG001 - ESTE USUÁRIO NÃO TEM SENHA DEFINIDA!\n\nPRESSIONE OK PARA CONTINUAR");
                             $location.path('/page5');
                           }
-                    }
-                    else if (parametros.cpf == user.value.cpf && parametros.password == user.value.password) {
+                    }else if (parametros.cpf == user.value.cpf && parametros.password == user.value.password) {
                        $state.go('dash');
                     }
 
               }).error(function(user, status){});
           }).error(function(chave, status){});
-};
 
+  };
 });
 
 // Salvando o cpf na memoria

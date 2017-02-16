@@ -2,8 +2,8 @@ angular.module('starter')
 
 .factory('userServiceToken', function($http) {
 
-  var _postToken = function(params){
-      return $http.post(SERVICE_URL+"/session",params);
+  var _postToken = function(parametros){
+      return $http.post(SERVICE_URL+"/session",parametros);
   };
 
   return{
