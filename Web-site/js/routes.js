@@ -1,11 +1,13 @@
-angular.module('site', ['ngRouter'])
-.config(function($routerProvider){
-
-    $routerProvider.otherwise('menu');
-
-    $routerProvider
-    .when('/menu', {
-        templateUrl:
+// (function() {
+//   'use strict';
+angular.module('site', ["ngRoute"])
+.config(function($routeProvider) {
+    $routeProvider
+    .when("/login", {
+        templateUrl : "templates/login.html",
+        controller: 'LoginController'
     })
 
+    $routeProvider.otherwise({redirectTo : '/login'});
 });
+// })();

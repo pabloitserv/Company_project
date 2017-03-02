@@ -1,1 +1,1 @@
-angular.module('site', [])
+angular.module('site', ["ngRoute"])
